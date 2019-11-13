@@ -105,7 +105,7 @@ un parametre `p` et le range dans une table `numsessions(p text)`.
 ## Mise en sécurité "élémentaire" du site
 1. Afin d'éviter l'injection XSS une technique basique et inefficace consiste à faire des replaceAll sur les chaines de caractères pour supprimer les caractères spéciaux `<>'()`. Testez cette approche sur le paramètre adresse.
 1. Testez la saisie de Villeneuve d'Ascq dans l'adresse
-1. l'API `Commons-text` de chez Apache et sa classe `StringEscapeUtils` est bien plus efficace puisqu'elle "encode" les caractères spéciaux ainsi que ceux supérieurs au code ascii 127.
+1. La classe `StringEscapeUtils` des API `Commons-text` et `Commons-lang` de chez [Apache](http://commons.Apache.org) est bien plus efficace puisqu'elle "encode" les caractères spéciaux ainsi que ceux supérieurs au code ascii 127.
   * Ecrire un programme Java simple qui saisit une chaine et affiche sa transformation avec la méthode `translate` de
 la classe `StringEscapeUtils`  
     ```java
